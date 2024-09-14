@@ -1,0 +1,5 @@
+% Land Cover Calculator N3 P2 %
+% Made by Owen Stuckman on September 13, 2024 %
+
+forest = input("");
+
