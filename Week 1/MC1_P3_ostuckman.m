@@ -1,6 +1,9 @@
 % Problem 3: Solar Cell Calculator %
 % Made by Owen Stuckman : September 13, 2024 %
 
+clear
+clc
+
 % Get user input
 avgSolarRadiation = input("Average solar radiation in kWh/m2/day \n");
 
