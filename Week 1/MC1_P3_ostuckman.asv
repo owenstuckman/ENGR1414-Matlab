@@ -1,8 +1,0 @@
-% Problem 3: Solar Cell Calculator %
-% Made by Owen Stuckman : September 13, 2024 %
-
-avgSolarRadiation = input("Average solar radiation in kWh/m2/day");
-
-amtSolarPanels = input("Quantity of solar panels to install: ");
-
-totEnergyProd = (1.67) * (.23) * (avgSolarRadiation) * ()

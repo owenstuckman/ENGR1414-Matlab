@@ -1,0 +1,11 @@
+
+
+riverLevel = input("\nInput River Level in Feet:\n");
+
+if riverLevel >= 14
+    disp("Flooding Present!");
+else 
+    disp("No Flooding Present!")
+else
+end
+
