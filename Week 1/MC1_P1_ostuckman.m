@@ -21,5 +21,6 @@ elimRate = log(2) / (estHalfLife);
 finalConc = initConc * exp((-1) * (elimRate) * (timePassed));
 
 disp(newline);
-disp("The current concentration of the drug in the body is: (for a given t in mg or hrs/mg)")
+disp("The current concentration of the drug in the body is: ")
+disp("(for a given t in mg or hrs/mg)");
 disp(finalConc);

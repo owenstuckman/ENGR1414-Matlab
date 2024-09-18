@@ -14,5 +14,6 @@ totEnergyProd = (1.67 * amtSolarPanels) * (.23) * (avgSolarRadiation) * (.75);
 
 % Display total
 disp(newline);
+disp("in kWh")
 disp(totEnergyProd);
 
