@@ -1,0 +1,17 @@
+
+response = 1;
+sum = 1;
+count = 1;
+
+while response ~= 0
+    riverLevel = input("Input the River Level: \n");
+    sum = sum + riverLevel;
+    count = count + 1;
+    response = input("Input the Response: \n");
+end
+
+average = sum/count;
+
+disp(newline);
+disp("Average River Level");
+disp(averg)

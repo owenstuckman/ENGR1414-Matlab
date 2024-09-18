@@ -1,0 +1,9 @@
+
+% init vars %
+sum = 0;
+position = 1;
+
+riverLevels = input("Input River Levels:\n");
+
+while position <= length(riverLevels)
+ 
