@@ -1,0 +1,9 @@
+% Manufacturing Tolerances %
+% Written by Owen Stuckman on 9/16/2024 %
+
+% input vars %
+measuredDimensions = input("Please input the measured dimensions of several parts in mm: \n");
+
+checkNum = input("\nPlease input the number of the part that is to be checked (Starting with 1 in correspondance to the entry: \n");
+
+if measuredDimensions(checkNum)

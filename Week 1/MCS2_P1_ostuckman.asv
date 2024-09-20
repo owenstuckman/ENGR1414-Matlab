@@ -1,0 +1,12 @@
+% Hazardous waste codes %
+% Created by Owen Stuckman on 9/19 %
+
+charBegin = input("Please input the letter at the beginning of the hazardous waste code: \n");
+
+if charBegin == "D"
+    numCode = input("\nPlease enter the number following the D in the code: \n");
+    switch numCode
+        case 1
+            disp("Ignitability")
+        case 2 
+            
