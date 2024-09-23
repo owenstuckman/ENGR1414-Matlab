@@ -29,3 +29,4 @@ end
 
 
 % Possible Improvements: Inputs - prevent wrong input %
+% new thing is switch case %

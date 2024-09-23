@@ -8,7 +8,7 @@ clear
 measuredDimensions = input("Please input the measured dimensions of several parts in mm: \n");
 checkNum = input("\nPlease input the number of the part that is to be checked (Starting with 1 in correspondance to the entry: \n");
 
-% format %
+% formating %
 disp(newline);
 
 % conditional to meet tolerance %
@@ -17,5 +17,5 @@ if measuredDimensions(checkNum) <= 10.05 && measuredDimensions(checkNum) >= 9.95
 else disp("Does not meet tolerance.");
 end
 
-% format %
+% formating %
 disp(newline);
