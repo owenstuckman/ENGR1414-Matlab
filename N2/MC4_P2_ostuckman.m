@@ -34,22 +34,24 @@ while true
     runCount = runCount + 1;
 end
 
+foundHund = false;
 
 % calculate sum of miles %
-for i = length(miles)
+for i = 1:length(miles)
     sum = miles(i) + sum;
-    if sum > 100
+    if sum > 100 && foundHund == false
         indexHund = i;
+        foundHund = true;
     end
 end
 
 % Display %
-
 disp(newline);
-disp("Total numbers cycled:")
+disp("Total numbers of miles cycled:")
 disp(sum);
 
 % if over 100, report day acheived 100 %
 if indexHund ~= 0
+    disp("Date ")
     disp(date(i));
 end

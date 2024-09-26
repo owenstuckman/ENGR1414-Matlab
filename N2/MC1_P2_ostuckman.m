@@ -5,7 +5,7 @@ clc
 clear 
 
 % get first char inputed %
-charBegin = input("Please input the letter at the beginning of the hazardous waste code: \n");
+charBegin = input("Please input the letter at the beginning of the hazardous waste code: (in quotes) \n");
 
 % check if equals D %
 if charBegin == "D"
@@ -25,8 +25,7 @@ if charBegin == "D"
         otherwise 
             disp("Invalid or other types of hazardous waste.");
     end
+else 
+    disp(newline);
+    disp("Invalid or unclassified code.");
 end
-
-
-% Possible Improvements: Inputs - prevent wrong input %
-% new thing is switch case %

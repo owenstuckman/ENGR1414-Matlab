@@ -12,7 +12,7 @@ expVector = input("\nPlease input a vector of a single candidae's experience: \n
 sum = 0;
 
 % for each element in array(vector) sum if greater or equal to 2 %
-for i = length(expVector)
+for i = 1:length(expVector)
     if expVector(i) >= 2
         sum = sum + expVector(i);
     end
