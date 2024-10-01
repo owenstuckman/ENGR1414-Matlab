@@ -14,9 +14,7 @@
 clear 
 clc
 
-% constants used %
-goalDiversionRate = .7;
-months = 3;
+% constants %
 galTrashLb = .68;
 galRecLb = .55;
 
@@ -25,7 +23,7 @@ galRecLb = .55;
 while true 
 
     % Program Explanation and Initial Information
-    disp("This program works to take the cans you are using and find the waste diversion rate.")
+    disp("This program works to take the cans you are using and find the waste diversion rate, and suggest plans for future improvement.")
     % display of common capacities %
     disp(newline);
     disp("Samples: Big belly solar solar can : 150 gal. Typical outdoor can: 35 gal.")
@@ -35,10 +33,14 @@ while true
     
     
     % Get inputs req for calc %
-    capacityTrashCan = input("\nTrash Can Capacity:");
-    capacityRecyclingCan = input("\nRecycling Can Capacity:");
-    numTrashCanFilled = input("\nAmount of Trash Cans filled: ");
-    numRecyclingCanFilled = input("\nAmount of Recycling Cans filled: ");
+    capacityTrashCan = input("\nTrash Can Capacity (gal):");
+    capacityRecyclingCan = input("\nRecycling Can Capacity (gal):");
+    numTrashCanFilled = input("\nAmount of Trash Cans filled (num): ");
+    numRecyclingCanFilled = input("\nAmount of Recycling Cans filled (num): ");
+    numMonthsPlan= input("\nHow many months of plans do you want (months): ");
+    intervalMonths = input("\nWhat interval do you want the plans to last for (months): ");
+    goalDiversionRate = input("\nInput what your goal diversion rate is. A typical goal is .7 or 70%. Please input as a decimal:");
+
 
     % Calc Rate %
     trashGen = capacityTrashCan*numTrashCanFilled * galTrashLb;
@@ -49,7 +51,6 @@ while true
     disp(newline);
     disp(newline);
     disp(newline);
-    disp("A common goal is to have a 70% diversion rate.");
     disp("Your diversion rate was: " + diversionRate);
 
     
@@ -65,32 +66,36 @@ while true
 
     disp("You are only " + differenceDiversionPercent + "% off from the 70% goal. You will be sure to hit your goal by sticking to one of the provided plans.")
     
-        % trash
+    months = 0+intervalMonths;
+
+        % trash plans
         disp(newline);
         disp("Plans for changing trash:");
     newTrashGenRequired = (recycleGen/goalDiversionRate)-recycleGen;
-    while months <= 12
+    while months <= numMonthsPlan
         monthlyChange = (trashGen - newTrashGenRequired) / months;
-        disp("Need to decrease trash by " + monthlyChange + "(lbs). For " + months + "moths. ")
+        disp("Need to decrease trash by " + monthlyChange + "(lbs). For " + months + " months. ")
 
-        months = months + 3;
+        months = months + intervalMonths;
     end
-    months = 3;
 
-        % recycling increase
+    months = 0+intervalMonths;
+
+        % recycling plans
         disp(newline);
         disp("Plans for changing recycling:");
     newRecycleGenRequired = (goalDiversionRate*trashGen)/(1-goalDiversionRate);
-    while months <= 12
+    while months <= numMonthsPlan
         monthlyChange = -1*((recycleGen - newRecycleGenRequired) / months);
-        disp("Need to increase recycling by " + monthlyChange + "(lbs). For " + months + "moths. ")
+        disp("Need to increase recycling by " + monthlyChange + "(lbs). For " + months + " months. ")
 
-        months = months + 3;
+        months = months + intervalMonths;
     end
-    months = 3;
+
+    months = 0+intervalMonths;
 
     
-    % display - give primary
+    % display - give primary suggestion
     disp(newline);
     disp("To reach goals, here is a good plan to implement:");
     if differenceDiversion < .1
@@ -103,7 +108,6 @@ while true
     
 
     % concluding message
-    disp(newline);
     disp("Best of luck hitting your waste diversion goals!")
    
     % rerun %

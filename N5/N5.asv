@@ -1,32 +1,31 @@
 % Waste Divergence Calculator %
-% Adapted from
+% Adapted from info form: %
 % https://cleanriver.com/resource/how-to-measure-your-waste-diversion-rate/ %
+
 % Waste weight estimations:
 % https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/utilities/solid-waste-management/recycling/commercial-fact-sheets/estimating-material-weight.pdf%
 % 150 gal capacity big belly solar %
 % 35 gal typical outdoor can
 
-% Converting weight of recycling / weight of total waste to: %
 % formula is rate = recycle / recycle + trash
 
 % Written by Owen Stuckman on October 1, 2024 %
 
+clear 
+clc
 
-% constants used %
+% varinit %
 goalDiversionRate = .7;
-months = 3;
+months = 0;
 galTrashLb = .68;
 galRecLb = .55;
-
-% some info used :
-% https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/utilities/solid-waste-management/recycling/commercial-fact-sheets/estimating-material-weight.pdf%
 
 % rerun external loop 
 
 while true 
 
     % Program Explanation and Initial Information
-    disp("This program works to take the cans you are using and find the waste diversion rate.")
+    disp("This program works to take the cans you are using and find the waste diversion rate, and suggest plans for future improvement.")
     % display of common capacities %
     disp(newline);
     disp("Samples: Big belly solar solar can : 150 gal. Typical outdoor can: 35 gal.")
@@ -40,6 +39,8 @@ while true
     capacityRecyclingCan = input("\nRecycling Can Capacity:");
     numTrashCanFilled = input("\nAmount of Trash Cans filled: ");
     numRecyclingCanFilled = input("\nAmount of Recycling Cans filled: ");
+    numMonthsPlan= input("\nHow many months of plans do you want: ");
+    intervalMonths = input("\nWhat interval do you want the plans to last for: ");
 
     % Calc Rate %
     trashGen = capacityTrashCan*numTrashCanFilled * galTrashLb;
@@ -62,42 +63,44 @@ while true
     disp(newline);
     disp("Here are some basic plans to get to a waste management goal.")
     differenceDiversion = abs(diversionRate-goalDiversionRate);
+    differenceDiversionPercent = differenceDiversion *100;
 
-    disp("You are only " + differenceDiversion + "% off. You will be sure to hit your goal by sticking to one of the provided plans.")
+    disp("You are only " + differenceDiversionPercent + "% off from the 70% goal. You will be sure to hit your goal by sticking to one of the provided plans.")
     
+    months = 0+intervalMonths;
         % trash
         disp(newline);
         disp("Plans for changing trash:");
     newTrashGenRequired = (recycleGen/goalDiversionRate)-recycleGen;
-    while months <= 12
+    while months <= numMonthsPlan
         monthlyChange = (trashGen - newTrashGenRequired) / months;
         disp("Need to decrease trash by " + monthlyChange + "(lbs). For " + months + "moths. ")
 
-        months = months + 3;
+        months = months + intervalMonths;
     end
-    months = 3;
 
+    months = 0+intervalMonths;
         % recycling increase
         disp(newline);
         disp("Plans for changing recycling:");
     newRecycleGenRequired = (goalDiversionRate*trashGen)/(1-goalDiversionRate);
-    while months <= 12
+    while months <= numMonthsPlan
         monthlyChange = -1*((recycleGen - newRecycleGenRequired) / months);
         disp("Need to increase recycling by " + monthlyChange + "(lbs). For " + months + "moths. ")
 
-        months = months + 3;
+        months = months + intervalMonths;
     end
-    months = 3;
+    months = 0+intervalMonths;
 
     
     % display - give primary
     disp(newline);
-    disp("To reach goals, here is a good plan to implement");
+    disp("To reach goals, here is a good plan to implement:");
     if differenceDiversion < .1
         disp("Choose a shorter plan, and make some decisions to make small shifts.")
     else if differenceDiversion <.3
         disp("Make some long term goals and changes to improve conditions.")
-        els
+    else disp("Do what you can to improve, a combination of a short term recycling plan and long term trash plan or vice verse might be best suited for you.")
     end
     end
     
@@ -108,7 +111,7 @@ while true
    
     % rerun %
     disp(newline);
-        reRun = input("Rerun? (Y\N):");
+        reRun = input("Rerun? (Y/N):");
         if reRun == "N"
             break
         end
