@@ -1,0 +1,4 @@
+
+
+data = readtable('sample file');
+
