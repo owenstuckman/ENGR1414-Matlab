@@ -1,0 +1,31 @@
+﻿Data Collector (Person),Day of the Week,Time (Military),Location (Qualitative) (Indoor/Outside),Recycling Can (Amount),Items Recycled,Trash Can (Amount),Items Trashed,Overflow on any?,General Comments (Traffic vs. Usage)
+Owen,Monday,18:45,Outside - Hitt near derring,0,0,4,0,N,"Fair amount of traffic, no usage of any waste bins."
+Darren,Monday,7:30,Outside - D2,2,0,2,0,N,To early in the moring for people to have things to throw away
+Darren,Tuesday,9:00,Outside - D2,2,0,2,1,N,
+Darren,Tuesday,9:15,Outside - D2,2,0,2,3,N,
+Darren ,Tuesday,15:30,Inside - Owens Chic fil a ,2,2,6,56,N,"Very high traffic, Large groups of people eating together"
+Owen,Wednesday,17:15,Inside - Torg Bridge near lending desk,1,1,1,1,N,low traffic in and out 
+Owen,Wednesday,17:30,Inside - Torg Bridge near lending desk,1,0,1,0,N,low traffic in and out 
+Owen ,Thursday,11:30,Inside - JSC 2nd Floor,0,0,2,1,N,extremely low traffic in and out
+Owen ,Thursday,0:00,Inside - JSC 2nd Floor,0,0,2,1,N,extremely low traffic in and out
+Darren ,Friday ,13:00,Inside Owens - Chic Fil a,2,0,6,30,N,Medium traffic. Most people took food with them 
+Josh,Monday,23:00,Outside - D2,0,0,2,9,Y,"Low traffic but a substantial amount of overflow, possibly leftover from the weekend"
+Owen,Tuesday,11:00,Inside - Hitt Hall Third Floor,1,0,1,1,N,low traffic
+Alton,Monday,19:00,Inside - GLC,1,1,5,4,N,low traffic
+Alton ,Tuesday,14:00,Outside - GLC,1,0,1,14,N,high traffic after class ended. no overflow in the trashcan no overflow
+Alton ,Thursday,14:00,Outside - D2,2,0,2,0,N,"low traffic, after d2 had closed no one was there"
+Luke,Tuesday,18:00,Outside- Turner,1,2,2,6,,low traffic outside of turner- high traffic inside turner
+Luke,Tuesday,18:15,Inside- Turner,2,2,4,7,N,high traffic- no overflow but trash was recently emptied
+Owen,Thursday,12:15,Inside - Third Floor Hitt,1,0,1,3,N,low traffic
+Owen ,Thursday,12:30,Inside - Third Floor Hitt,1,0,1,2,N,low traffic
+Darren ,Thursday,12:30,Inside Owens - Chic Fil a,2,0,6,31,N,Trash was taken out
+Darren ,Thursday,12:45,Inside Owens - Chic Fil a,2,1,6,47,N,Trash was taken out recently
+Darren,Thursday,13:00,Inside Owens - Chic Fil a,2,0,6,38,N,
+Luke,Thursday,9:45,Outside-Turner,2,3,4,7,N,
+Luke,Thursday,10:15,Inside- Turner,4,9,5,12,N,
+Brij,Thursday,18:30,"Outside CID, across the road towards owens side",0,0,1,1,N,Low traffic
+Brij,Thursday,10:45,Inside D2,2,3,5,8,N,Medium traffic. Most people took food with them 
+Brij,Thursday,20:45,Inside Owens - Chic Fil a,0,0,0,0,N,Trash cans closed?
+Brij,Tuesday,23:15,Inside D2,4,7,8,14,N,High traffic.
+Brij,Wednesday,13:30,Inside Hitt Hall Floor 2,2,2,4,5,N,Medium traffic.
+Owen,Friday ,15:30,Inside- Prichard L2,0,0,1,3,N,"very low traffic, same people for 15 min"
